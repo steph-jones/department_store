@@ -6,3 +6,7 @@
 <%= link_to 'Edit Department', edit_department_path(@department) %>
 <br />
 <%= link_to 'Delete Department', department_path(@department.id), method: :delete %>
+<br />
+<%= link_to 'View Department Items', department_items_path(@department) %>
+<br />
+<%= link_to 'Add Items', new_department_item_path(@department) %>

@@ -1,0 +1,11 @@
+<h1> <%= @comment.id ? "Edit Comment for" : "Create Comment for" %> <%= @item.name %> </h1>
+<!--  checks that @sub.id exists and if it does edit and if it doesnt new-->
+<hr />
+<%= form_for [@item, @comment] do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author, placeholder: 'Leave Blank To Remain Anonymous'%>
+  <br />
+  <%= f.label :body %>
+  <%= f.text_area :body, require: true %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,12 @@
+
+<h1> <%= @item.id ? "Edit Item in" : "Create Item in" %> <%= @department.name %> </h1>
+<!--  checks that @sub.id exists and if it does edit and if it doesnt new-->
+<hr />
+<%= form_for [@department, @item] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <br />
+  <%= f.label :price %>
+  <%= f.text_area :price, require: true %>
+  <%= f.submit %>
+<% end %>
